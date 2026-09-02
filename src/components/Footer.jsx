@@ -1,0 +1,208 @@
+"use client";
+
+import React, { useState } from 'react';
+import { Instagram, Facebook, Youtube, MessageCircle, Heart, CheckCircle } from 'lucide-react';
+import BrandLogo from './BrandLogo';
+
+export default function Footer({ onOpenBooking }) {
+  const [subscribed, setSubscribed] = useState(false);
+  const [email, setEmail] = useState('');
+
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    if (email) {
+      setSubscribed(true);
+      setEmail('');
+    }
+  };
+
+  return (
+    <footer className="site-footer">
+      <div className="container-custom">
+        
+        <div className="footer-columns-grid">
+          
+          {/* Column 1: Brand Info */}
+          <div>
+            <div style={{ marginBottom: '16px' }}>
+              <BrandLogo size={52} showText={true} isLight={true} />
+            </div>
+
+            <p style={{ fontSize: '0.75rem', color: 'var(--slate-400)', lineHeight: 1.5, marginBottom: '16px', maxWidth: '240px' }}>
+              Your trusted adventure partner in Leh Ladakh. Ride more, worry less!
+            </p>
+
+            {/* Social Icons */}
+            <div style={{ display: 'flex', gap: '10px' }}>
+              <a 
+                href="https://www.instagram.com/ridewithbk?igsi=cGFxMWUxbDh3dGRx&utm_source=qr" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                style={{
+                  width: '32px',
+                  height: '32px',
+                  borderRadius: 'var(--radius-full)',
+                  border: '1px solid var(--slate-700)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: 'var(--slate-300)',
+                  transition: 'all 0.2s'
+                }}
+              >
+                <Instagram size={14} />
+              </a>
+              <a 
+                href="https://facebook.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                style={{
+                  width: '32px',
+                  height: '32px',
+                  borderRadius: 'var(--radius-full)',
+                  border: '1px solid var(--slate-700)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: 'var(--slate-300)',
+                  transition: 'all 0.2s'
+                }}
+              >
+                <Facebook size={14} />
+              </a>
+              <a 
+                href="https://youtube.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                style={{
+                  width: '32px',
+                  height: '32px',
+                  borderRadius: 'var(--radius-full)',
+                  border: '1px solid var(--slate-700)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: 'var(--slate-300)',
+                  transition: 'all 0.2s'
+                }}
+              >
+                <Youtube size={14} />
+              </a>
+              <a 
+                href="https://wa.me/919797948265" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+                style={{
+                  width: '32px',
+                  height: '32px',
+                  borderRadius: 'var(--radius-full)',
+                  border: '1px solid var(--slate-700)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: 'var(--slate-300)',
+                  transition: 'all 0.2s'
+                }}
+              >
+                <MessageCircle size={14} />
+              </a>
+            </div>
+          </div>
+
+          {/* Column 2: Quick Links */}
+          <div>
+            <h4 className="footer-col-title">QUICK LINKS</h4>
+            <ul className="footer-links-list">
+              <li><a href="#">Home</a></li>
+              <li><a href="#destinations">Destinations</a></li>
+              <li><a href="#bikes">Bike Rental</a></li>
+              <li><a href="#taxi-services">Taxi Service</a></li>
+              <li><a href="#packages">Tour Packages</a></li>
+            </ul>
+          </div>
+
+          {/* Column 3: Other Links */}
+          <div>
+            <h4 className="footer-col-title">OTHER LINKS</h4>
+            <ul className="footer-links-list">
+              <li><a href="#hotels">Hotels</a></li>
+              <li><a href="#about-us">About Us</a></li>
+              <li><a href="#gallery">Photo Gallery</a></li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+            </ul>
+          </div>
+
+          {/* Column 4: Our Services */}
+          <div>
+            <h4 className="footer-col-title">OUR SERVICES</h4>
+            <ul className="footer-links-list">
+              <li><a href="#bikes">Bike Rental</a></li>
+              <li><a href="#taxi-services">Taxi Service Leh Ladakh</a></li>
+              <li><a href="#packages">Tour Package</a></li>
+              <li><a href="#hotels">Hotel Availability</a></li>
+              <li><a href="#snow-leopard">Snow Leopard in Winter</a></li>
+              <li><a href="#frozen-pangong">Frozen Pangong Lake in Winter</a></li>
+            </ul>
+          </div>
+
+          {/* Column 5: Newsletter */}
+          <div>
+            <h4 className="footer-col-title">NEWSLETTER</h4>
+            <p style={{ fontSize: '0.75rem', color: 'var(--slate-400)', marginBottom: '12px' }}>
+              Subscribe to get updates & exclusive offers.
+            </p>
+
+            {subscribed ? (
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#10B981', fontSize: '0.75rem', fontWeight: 600 }}>
+                <CheckCircle size={15} />
+                <span>Thank you for subscribing!</span>
+              </div>
+            ) : (
+              <form onSubmit={handleSubscribe}>
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  required
+                  className="footer-newsletter-input"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <button
+                  type="submit"
+                  className="btn-primary-orange"
+                  style={{ width: '100%', padding: '8px 16px', fontSize: '0.75rem' }}
+                >
+                  SUBSCRIBE
+                </button>
+              </form>
+            )}
+          </div>
+
+        </div>
+
+        {/* Footer Bottom Bar */}
+        <div className="footer-bottom-bar">
+          <div>
+            © {new Date().getFullYear()} Biker King Adventure. All Rights Reserved.
+          </div>
+          <div style={{ display: 'flex', gap: '16px' }}>
+            <a href="#terms" style={{ color: 'inherit', textDecoration: 'none' }}>Terms & Conditions</a>
+            <span>|</span>
+            <a href="#privacy" style={{ color: 'inherit', textDecoration: 'none' }}>Privacy Policy</a>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+            <span>Designed with</span>
+            <Heart size={12} fill="#EF4444" stroke="#EF4444" />
+            <span>for Riders</span>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+  );
+}

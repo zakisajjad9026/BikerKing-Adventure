@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biker King Adventure | Ultimate Leh Ladakh Motorbike Rentals & Tours</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        amber: {
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .hero-pulse {
+            animation-duration: 10s;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-amber-500 selection:text-slate-950">
+
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-amber-600 flex items-center justify-center text-slate-950 font-black text-xl shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform">
+                    BK
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-extrabold text-lg tracking-wider text-white uppercase leading-none">Biker King</span>
+                    <span class="text-xs font-semibold text-amber-500 tracking-widest uppercase">Adventure</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-300">
+                <a href="#bikes" class="hover:text-amber-500 transition-colors">Our Fleet</a>
+                <a href="#services" class="hover:text-amber-500 transition-colors">Services</a>
+                <a href="#expeditions" class="hover:text-amber-500 transition-colors">Winter Expeditions</a>
+                <a href="#contact" class="hover:text-amber-500 transition-colors">Contact</a>
+            </nav>
+
+            <div class="hidden md:flex items-center gap-4">
+                <a href="tel:9797948265" class="flex items-center gap-2 text-sm font-semibold text-slate-300 hover:text-white transition-colors">
+                    <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i>
+                    9797948265
+                </a>
+                <a href="https://wa.me/919797948265" target="_blank" rel="noopener" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-5 py-2.5 rounded-xl transition-all shadow-lg shadow-amber-500/20 hover:shadow-amber-500/40 text-sm">
+                    Book Ride Now
+                </a>
+            </div>
+
+            <button id="menu-btn" type="button" aria-label="Toggle menu" class="md:hidden text-slate-300 hover:text-white p-2">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden border-b border-slate-800 bg-slate-950 px-4 pt-2 pb-6 space-y-4">
+            <a href="#bikes" class="block text-slate-300 hover:text-amber-500 font-medium py-1">Our Fleet</a>
+            <a href="#services" class="block text-slate-300 hover:text-amber-500 font-medium py-1">Services</a>
+            <a href="#expeditions" class="block text-slate-300 hover:text-amber-500 font-medium py-1">Winter Expeditions</a>
+            <a href="#contact" class="block text-slate-300 hover:text-amber-500 font-medium py-1">Contact</a>
+            <div class="pt-2 flex flex-col gap-3">
+                <a href="tel:9797948265" class="flex items-center justify-center gap-2 text-sm font-semibold text-slate-300 py-2 rounded-lg border border-slate-800">
+                    <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i> Call: 9797948265
+                </a>
+                <a href="https://wa.me/919797948265" target="_blank" rel="noopener" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-5 py-2.5 rounded-xl text-center text-sm">
+                    Book Ride Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&q=80" alt="Ladakh Mountains" class="w-full h-full object-cover opacity-30 scale-105 animate-pulse">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/40 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center md:text-left grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-500 text-xs font-semibold tracking-wide uppercase">
+                    <i data-lucide="compass" class="w-4 h-4"></i> Premiere Leh Ladakh Outfitters
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-black text-white tracking-tight leading-none">
+                    Conquer The <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600">Himalayan</span> Passes.
+                </h1>
+                <p class="text-slate-400 text-base sm:text-lg max-w-xl font-normal leading-relaxed">
+                    Premium Royal Enfield rentals, rugged 4x4 taxi services, curated winter expeditions, and seamless Leh stays. Your journey through the land of high passes starts here.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 pt-2 justify-center md:justify-start">
+                    <a href="#bikes" class="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-amber-500/25 hover:shadow-amber-500/40">
+                        Explore Our Fleet <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ridewithbk?igsi=cGFxMWUxbDh3dGRx&utm_source=qr" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 border border-slate-700 hover:border-slate-500 bg-slate-900/50 text-slate-200 font-semibold px-6 py-4 rounded-xl transition-all backdrop-blur-sm">
+                        <i data-lucide="instagram" class="w-5 h-5 text-amber-500"></i> @ridewithbk
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-slate-900/80 border border-slate-800 p-6 sm:p-8 rounded-2xl backdrop-blur-md shadow-2xl relative">
+                <div class="absolute -top-3 right-6 bg-amber-500 text-slate-950 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                    Instant Booking
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Plan Your Ladakh Trip</h3>
+                <p class="text-xs text-slate-400 mb-6">Select your service and get immediate confirmation via WhatsApp.</p>
+                
+                <form class="space-y-4 text-left" onsubmit="event.preventDefault(); window.open('https://wa.me/919797948265?text=Hi%20Biker%20King%20Adventure,%20I%20want%20to%20inquire%20about%20renting%20a%20vehicle.', '_blank');">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Service Type</label>
+                        <select class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-200 focus:outline-none focus:border-amber-500" title="Select your desired service type">
+                            <option>Bike Rental</option>
+                            <option>Taxi Service</option>
+                            <option>Tour Package</option>
+                            <option>Hotel Booking</option>
+                            <option>Snow Leopard Winter Expedition</option>
+                            <option>Frozen Pangong Lake Tour</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Preferred Model (If Renting)</label>
+                        <select class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-200 focus:outline-none focus:border-amber-500" title="Select your preferred bike model">
+                            <option>Himalayan 450</option>
+                            <option>Himalayan 411</option>
+                            <option>Himalayan 440 (Guerrilla)</option>
+                            <option>Scram 411</option>
+                            <option>Meteor 350</option>
+                            <option>Hunter 350</option>
+                            <option>Classic 350</option>
+                            <option>Scooty (Automatic)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold py-3.5 rounded-xl transition-all shadow-md flex items-center justify-center gap-2">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i> Inquire via WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="border-y border-slate-900 bg-slate-950/50 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+                <p class="text-3xl font-black text-amber-500">100%</p>
+                <p class="text-xs text-slate-400 uppercase tracking-wider mt-1">Maintained Fleet</p>
+            </div>
+            <div>
+                <p class="text-3xl font-black text-white">5000+</p>
+                <p class="text-xs text-slate-400 uppercase tracking-wider mt-1">Happy Riders</p>
+            </div>
+            <div>
+                <p class="text-3xl font-black text-amber-500">24/7</p>
+                <p class="text-xs text-slate-400 uppercase tracking-wider mt-1">Roadside Support</p>
+            </div>
+            <div>
+                <p class="text-3xl font-black text-white">Leh</p>
+                <p class="text-xs text-slate-400 uppercase tracking-wider mt-1">Local Experts</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="bikes" class="py-24 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                <div>
+                    <span class="text-amber-500 font-semibold text-xs uppercase tracking-widest">Our Fleet</span>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-2">Built For High Altitudes</h2>
+                </div>
+                <p class="text-slate-400 text-sm max-w-md mt-4 md:mt-0">
+                    All machines are meticulously serviced and tuned specifically to handle the thin air and tough terrain of Ladakh's passes.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 hover:border-amber-500/50 transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="h-44 bg-slate-950 rounded-xl flex items-center justify-center overflow-hidden mb-4 relative">
+                            <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&q=80" alt="Himalayan 450" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-amber-500 text-slate-950 font-bold text-xs px-2.5 py-1 rounded-md">Top Pick</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-colors">Himalayan 450</h3>
+                        <p class="text-xs text-slate-400 mt-1">Liquid-cooled Sherpa engine, perfect for long expedition routes.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Royal Enfield</span>
+                        <a href="https://wa.me/919797948265?text=Book%20Himalayan%20450" class="text-sm font-semibold text-amber-500 hover:text-amber-400 flex items-center gap-1">
+                            Book <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 hover:border-amber-500/50 transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="h-44 bg-slate-950 rounded-xl flex items-center justify-center overflow-hidden mb-4">
+                            <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&q=80" alt="Himalayan 411" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-colors">Himalayan 411</h3>
+                        <p class="text-xs text-slate-400 mt-1">The legendary rugged adventure tourer that conquered Ladakh.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Royal Enfield</span>
+                        <a href="https://wa.me/919797948265?text=Book%20Himalayan%20411" class="text-sm font-semibold text-amber-500 hover:text-amber-400 flex items-center gap-1">
+                            Book <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 hover:border-amber-500/50 transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="h-44 bg-slate-950 rounded-xl flex items-center justify-center overflow-hidden mb-4">
+                            <img src="https://images.unsplash.com/photo-1609630875171-b1321377ee65?auto=format&fit=crop&q=80" alt="Scram 411" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-colors">Scram 411 / 440</h3>
+                        <p class="text-xs text-slate-400 mt-1">Agile urban scrambler built for mountain trail responsiveness.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Royal Enfield</span>
+                        <a href="https://wa.me/919797948265?text=Book%20Scram" class="text-sm font-semibold text-amber-500 hover:text-amber-400 flex items-center gap-1">
+                            Book <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 hover:border-amber-500/50 transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="h-44 bg-slate-950 rounded-xl flex items-center justify-center overflow-hidden mb-4">
+                            <img src="https://images.unsplash.com/photo-1558980910-a8da21293168?auto=format&fit=crop&q=80" alt="Meteor 350" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <h3 class="text-lg font-bold text-white group-hover:text-amber-500 transition-colors">Meteor / Hunter 350</h3>
+                        <p class="text-xs text-slate-400 mt-1">Cruiser elegance and sleek maneuverability for highway glides.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Royal Enfield</span>
+                        <a href="https://wa.me/919797948265?text=Book%20350cc" class="text-sm font-semibold text-amber-500 hover:text-amber-400 flex items-center gap-1">
+                            Book <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 bg-slate-900/30 border border-slate-800/80 rounded-xl p-4 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-400">
+                <span class="flex items-center gap-2"><i data-lucide="check-circle" class="text-amber-500 w-4 h-4"></i> Classic 350 Available</span>
+                <span class="flex items-center gap-2"><i data-lucide="check-circle" class="text-amber-500 w-4 h-4"></i> Automatic Scooty Rentals Available</span>
+                <span class="flex items-center gap-2"><i data-lucide="check-circle" class="text-amber-500 w-4 h-4"></i> Helmets & Riding Gear Provided</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-slate-900/30 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-amber-500 font-semibold text-xs uppercase tracking-widest">Everything You Need</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Comprehensive Ladakh Travel Services</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-slate-950 border border-slate-800 p-8 rounded-2xl hover:border-amber-500/50 transition-all">
+                    <div class="w-12 h-12 bg-amber-500/10 text-amber-500 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="car" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Taxi Service Leh Ladakh</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Experienced mountain drivers with rugged 4x4 vehicles (Innovas, Xylo, Scorpio) ready for Nubra Valley, Pangong, and Tso Moriri.
+                    </p>
+                </div>
+
+                <div class="bg-slate-950 border border-slate-800 p-8 rounded-2xl hover:border-amber-500/50 transition-all">
+                    <div class="w-12 h-12 bg-amber-500/10 text-amber-500 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="map" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Customized Tour Packages</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        End-to-end itinerary design including permit assistance, backup support vehicles, mechanic assistance, and group rides.
+                    </p>
+                </div>
+
+                <div class="bg-slate-950 border border-slate-800 p-8 rounded-2xl hover:border-amber-500/50 transition-all">
+                    <div class="w-12 h-12 bg-amber-500/10 text-amber-500 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="bed" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Hotel & Camp Availability</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Pre-booked luxury stays, cozy guesthouses in Leh, and scenic lakeside tent camps guaranteed even during peak season.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="expeditions" class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?auto=format&fit=crop&q=80" alt="Snowy Mountains" class="w-full h-full object-cover opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-slate-950/70"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="inline-block bg-sky-500/10 text-sky-400 border border-sky-500/30 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-4">
+                        Exclusive Winter Expeditions
+                    </span>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white leading-tight mb-6">
+                        Experience The Frozen Magic Of Ladakh
+                    </h2>
+                    <p class="text-slate-300 text-base mb-8 leading-relaxed">
+                        Step out of the ordinary with our specialized winter tours designed for true thrill-seekers. Witness raw nature in sub-zero temperatures with total safety and local experts.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 bg-slate-900/80 border border-slate-800 p-4 rounded-xl">
+                            <div class="p-2 bg-sky-500/10 text-sky-400 rounded-lg shrink-0">
+                                <i data-lucide="snowflake" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Snow Leopard Tracking in Winter</h4>
+                                <p class="text-xs text-slate-400 mt-1">Guided expeditions into Hemis National Park to spot the elusive Ghost of the Mountains.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 bg-slate-900/80 border border-slate-800 p-4 rounded-xl">
+                            <div class="p-2 bg-sky-500/10 text-sky-400 rounded-lg shrink-0">
+                                <i data-lucide="mountain" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Frozen Pangong Lake Expedition</h4>
+                                <p class="text-xs text-slate-400 mt-1">Witness the surreal sight of the high-altitude lake completely frozen solid into sheet ice.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 rounded-3xl p-8 text-center relative">
+                    <h3 class="text-2xl font-bold text-white mb-2">Winter Booking Open</h3>
+                    <p class="text-xs text-slate-400 mb-6">Limited slots available for guided winter tracking groups.</p>
+                    <a href="https://wa.me/919797948265?text=Hi,%20I%20am%20interested%20in%20Winter%20Expeditions" class="inline-block w-full bg-sky-500 hover:bg-sky-600 text-slate-950 font-bold py-4 rounded-xl transition-all shadow-lg shadow-sky-500/20">
+                        Inquire For Winter Packages
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-slate-950 border-t border-slate-900 pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 pb-12 border-b border-slate-900">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-lg bg-amber-500 flex items-center justify-center text-slate-950 font-black text-sm">
+                            BK
+                        </div>
+                        <span class="font-extrabold text-white tracking-wider uppercase">Biker King Adventure</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Your trusted companion for motorcycle rentals, taxi services, and custom adventure itineraries across Leh, Ladakh.
+                    </p>
+                    <a href="https://www.instagram.com/ridewithbk?igsi=cGFxMWUxbDh3dGRx&utm_source=qr" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-xs font-semibold text-amber-500 hover:text-amber-400">
+                        <i data-lucide="instagram" class="w-4 h-4"></i> Follow Us @ridewithbk
+                    </a>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-white">Contact Info</h4>
+                    <ul class="space-y-2 text-xs text-slate-400">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i>
+                            <a href="tel:9797948265" class="hover:text-white transition-colors">+91 9797948265</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="mail" class="w-4 h-4 text-amber-500"></i>
+                            <a href="mailto:bikerkingadventure98@gmail.com" class="hover:text-white transition-colors">bikerkingadventure98@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-white">Visit Our HQ</h4>
+                    <div class="flex items-start gap-2 text-xs text-slate-400">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-amber-500 shrink-0 mt-0.5"></i>
+                        <span>Malpax Complex, Leh, Ladakh 194101</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+                <p>&copy; 2026 Biker King Adventure. All rights reserved.</p>
+                <p>Designed for Ultimate Adventure</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

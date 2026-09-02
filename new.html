@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biker King Adventure | Premium Bike Rentals & Expeditions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        amber: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-amber-500 selection:text-white">
+
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-amber-600 flex items-center justify-center text-slate-950 font-black text-xl shadow-md">
+                    BK
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-extrabold text-lg tracking-wider text-slate-900 uppercase leading-none">Biker King</span>
+                    <span class="text-xs font-bold text-amber-600 tracking-widest uppercase mt-0.5">Adventure</span>
+                </div>
+            </a>
+
+            <nav class="hidden lg:flex items-center gap-6 font-semibold text-sm text-slate-600">
+                <a href="#" class="text-amber-600">Home</a>
+                <a href="#destinations" class="hover:text-amber-600 transition-colors">Destinations</a>
+                <a href="#packages" class="hover:text-amber-600 transition-colors">Packages</a>
+                <a href="#sessions" class="hover:text-amber-600 transition-colors">Upcoming Sessions</a>
+                <a href="#fleet" class="hover:text-amber-600 transition-colors">Fleet</a>
+                <a href="#gallery" class="hover:text-amber-600 transition-colors">Gallery</a>
+                <a href="#about" class="hover:text-amber-600 transition-colors">About Us</a>
+                <a href="#faqs" class="hover:text-amber-600 transition-colors">FAQs</a>
+                <a href="#contact" class="hover:text-amber-600 transition-colors">Contact</a>
+            </nav>
+
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="https://wa.me/919797948265" target="_blank" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-6 py-2.5 rounded-xl transition-all shadow-md text-sm">
+                    Book Now
+                </a>
+            </div>
+
+            <button id="menu-btn" class="lg:hidden text-slate-700 p-2">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden border-b border-slate-200 bg-white px-4 pt-2 pb-6 space-y-3 shadow-lg">
+            <a href="#" class="block text-amber-600 font-semibold py-1">Home</a>
+            <a href="#destinations" class="block text-slate-700 hover:text-amber-600 font-semibold py-1">Destinations</a>
+            <a href="#packages" class="block text-slate-700 hover:text-amber-600 font-semibold py-1">Packages</a>
+            <a href="#sessions" class="block text-slate-700 hover:text-amber-600 font-semibold py-1">Upcoming Sessions</a>
+            <a href="#fleet" class="block text-slate-700 hover:text-amber-600 font-semibold py-1">Fleet</a>
+            <a href="#gallery" class="block text-slate-700 hover:text-amber-600 font-semibold py-1">Gallery</a>
+            <a href="#about" class="block text-slate-700 hover:text-amber-600 font-semibold py-1">About Us</a>
+            <a href="#faqs" class="block text-slate-700 hover:text-amber-600 font-semibold py-1">FAQs</a>
+            <a href="#contact" class="block text-slate-700 hover:text-amber-600 font-semibold py-1">Contact</a>
+        </div>
+    </header>
+
+    <section class="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 text-white py-24 overflow-hidden">
+        <div class="absolute inset-0 opacity-30">
+            <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&q=80" alt="Hero background" class="w-full h-full object-cover">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 text-center lg:text-left">
+                <h1 class="text-4xl sm:text-6xl font-black uppercase tracking-tight leading-none">
+                    Where Every Turn <br><span class="text-amber-500">Is An Adventure</span>
+                </h1>
+                <p class="text-slate-300 text-base sm:text-lg max-w-xl font-medium">
+                    Explore breathtaking destinations, ride premium bikes, and create memories that last a lifetime.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 pt-2 justify-center lg:justify-start">
+                    <a href="https://wa.me/919797948265" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg text-sm uppercase">
+                        Book Your Journey
+                    </a>
+                    <a href="#contact" class="border border-slate-600 hover:border-slate-400 bg-slate-900/50 text-white font-bold px-8 py-3.5 rounded-xl transition-all text-sm uppercase">
+                        Contact Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white border-b border-slate-200 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            <div class="flex items-center gap-3">
+                <i data-lucide="shield-check" class="w-8 h-8 text-amber-500 shrink-0"></i>
+                <div>
+                    <h4 class="text-xs font-extrabold text-slate-900 uppercase">Safety First</h4>
+                    <p class="text-[11px] text-slate-500">Your safety is our top priority</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <i data-lucide="bike" class="w-8 h-8 text-amber-500 shrink-0"></i>
+                <div>
+                    <h4 class="text-xs font-extrabold text-slate-900 uppercase">Premium Bikes</h4>
+                    <p class="text-[11px] text-slate-500">Well-maintained bikes for smooth rides</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <i data-lucide="compass" class="w-8 h-8 text-amber-500 shrink-0"></i>
+                <div>
+                    <h4 class="text-xs font-extrabold text-slate-900 uppercase">Expert Guides</h4>
+                    <p class="text-[11px] text-slate-500">Experienced riders to guide your journey</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <i data-lucide="bed" class="w-8 h-8 text-amber-500 shrink-0"></i>
+                <div>
+                    <h4 class="text-xs font-extrabold text-slate-900 uppercase">Quality Stays</h4>
+                    <p class="text-[11px] text-slate-500">Comfortable stays in best locations</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <i data-lucide="wrench" class="w-8 h-8 text-amber-500 shrink-0"></i>
+                <div>
+                    <h4 class="text-xs font-extrabold text-slate-900 uppercase">Roadside Support</h4>
+                    <p class="text-[11px] text-slate-500">Support vehicle & mechanic on tour</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <i data-lucide="headphones" class="w-8 h-8 text-amber-500 shrink-0"></i>
+                <div>
+                    <h4 class="text-xs font-extrabold text-slate-900 uppercase">24/7 Assistance</h4>
+                    <p class="text-[11px] text-slate-500">We are here to help you anytime</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="destinations" class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-amber-600 font-bold text-xs uppercase tracking-widest">Top Tour Destinations</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-slate-900 uppercase mt-1">Handpicked Routes For The Ultimate Riding Experience</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&q=80" alt="Ladakh" class="h-44 w-full object-cover">
+                    <div class="p-5">
+                        <h3 class="font-extrabold text-slate-900 text-lg uppercase">Ladakh Adventure</h3>
+                        <p class="text-xs text-slate-500 mt-1">Starting from</p>
+                        <p class="text-amber-600 font-black text-lg">₹24,999 /-</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1609630875171-b1321377ee65?auto=format&fit=crop&q=80" alt="Spiti" class="h-44 w-full object-cover">
+                    <div class="p-5">
+                        <h3 class="font-extrabold text-slate-900 text-lg uppercase">Spiti Valley Escape</h3>
+                        <p class="text-xs text-slate-500 mt-1">Starting from</p>
+                        <p class="text-amber-600 font-black text-lg">₹22,999 /-</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?auto=format&fit=crop&q=80" alt="North East" class="h-44 w-full object-cover">
+                    <div class="p-5">
+                        <h3 class="font-extrabold text-slate-900 text-lg uppercase">North East Trail</h3>
+                        <p class="text-xs text-slate-500 mt-1">Starting from</p>
+                        <p class="text-amber-600 font-black text-lg">₹28,999 /-</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1558980910-a8da21293168?auto=format&fit=crop&q=80" alt="Goa" class="h-44 w-full object-cover">
+                    <div class="p-5">
+                        <h3 class="font-extrabold text-slate-900 text-lg uppercase">Coastal Ride Goa</h3>
+                        <p class="text-xs text-slate-500 mt-1">Starting from</p>
+                        <p class="text-amber-600 font-black text-lg">₹14,999 /-</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-black text-slate-900 uppercase text-center mb-12">How To Book</h2>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
+                <div class="space-y-3">
+                    <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center mx-auto text-xl font-bold">1</div>
+                    <h4 class="font-bold text-xs uppercase text-slate-900">Choose Destination</h4>
+                    <p class="text-[11px] text-slate-500">Select your favorite package.</p>
+                </div>
+                <div class="space-y-3">
+                    <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center mx-auto text-xl font-bold">2</div>
+                    <h4 class="font-bold text-xs uppercase text-slate-900">Select Date</h4>
+                    <p class="text-[11px] text-slate-500">Choose preferred travel date.</p>
+                </div>
+                <div class="space-y-3">
+                    <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center mx-auto text-xl font-bold">3</div>
+                    <h4 class="font-bold text-xs uppercase text-slate-900">Book & Pay</h4>
+                    <p class="text-[11px] text-slate-500">Fill details & complete payment.</p>
+                </div>
+                <div class="space-y-3">
+                    <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center mx-auto text-xl font-bold">4</div>
+                    <h4 class="font-bold text-xs uppercase text-slate-900">Confirmation</h4>
+                    <p class="text-[11px] text-slate-500">Get booking confirmation instantly.</p>
+                </div>
+                <div class="space-y-3 col-span-2 md:col-span-1">
+                    <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center mx-auto text-xl font-bold">5</div>
+                    <h4 class="font-bold text-xs uppercase text-slate-900">Get Set Ride</h4>
+                    <p class="text-[11px] text-slate-500">Pack bags & enjoy adventure!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sessions" class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-black text-slate-900 uppercase text-center mb-12">Upcoming Sessions</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-amber-500 text-slate-950 font-black p-3 rounded-xl text-center leading-none">
+                            <span class="text-lg block">15</span>
+                            <span class="text-xs uppercase">JUN</span>
+                        </div>
+                        <div>
+                            <h4 class="font-extrabold text-slate-900 text-sm uppercase">Ladakh Adventure</h4>
+                            <p class="text-xs text-slate-500">7 Days / 6 Nights</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center text-xs pt-2 border-t border-slate-100">
+                        <span class="font-black text-slate-900">₹24,999 /-</span>
+                        <span class="text-red-500 font-bold">6 SEATS LEFT</span>
+                    </div>
+                    <a href="https://wa.me/919797948265" class="block w-full text-center bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-2.5 rounded-xl text-xs uppercase">Book Now</a>
+                </div>
+
+                <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-amber-500 text-slate-950 font-black p-3 rounded-xl text-center leading-none">
+                            <span class="text-lg block">25</span>
+                            <span class="text-xs uppercase">JUN</span>
+                        </div>
+                        <div>
+                            <h4 class="font-extrabold text-slate-900 text-sm uppercase">Spiti Valley Escape</h4>
+                            <p class="text-xs text-slate-500">7 Days / 6 Nights</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center text-xs pt-2 border-t border-slate-100">
+                        <span class="font-black text-slate-900">₹22,999 /-</span>
+                        <span class="text-red-500 font-bold">6 SEATS LEFT</span>
+                    </div>
+                    <a href="https://wa.me/919797948265" class="block w-full text-center bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-2.5 rounded-xl text-xs uppercase">Book Now</a>
+                </div>
+
+                <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-amber-500 text-slate-950 font-black p-3 rounded-xl text-center leading-none">
+                            <span class="text-lg block">05</span>
+                            <span class="text-xs uppercase">JUL</span>
+                        </div>
+                        <div>
+                            <h4 class="font-extrabold text-slate-900 text-sm uppercase">North East Trail</h4>
+                            <p class="text-xs text-slate-500">8 Days / 7 Nights</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center text-xs pt-2 border-t border-slate-100">
+                        <span class="font-black text-slate-900">₹28,999 /-</span>
+                        <span class="text-red-500 font-bold">6 SEATS LEFT</span>
+                    </div>
+                    <a href="https://wa.me/919797948265" class="block w-full text-center bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-2.5 rounded-xl text-xs uppercase">Book Now</a>
+                </div>
+
+                <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-amber-500 text-slate-950 font-black p-3 rounded-xl text-center leading-none">
+                            <span class="text-lg block">18</span>
+                            <span class="text-xs uppercase">JUL</span>
+                        </div>
+                        <div>
+                            <h4 class="font-extrabold text-slate-900 text-sm uppercase">Coastal Ride Goa</h4>
+                            <p class="text-xs text-slate-500">4 Days / 3 Nights</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center text-xs pt-2 border-t border-slate-100">
+                        <span class="font-black text-slate-900">₹14,999 /-</span>
+                        <span class="text-red-500 font-bold">10 SEATS LEFT</span>
+                    </div>
+                    <a href="https://wa.me/919797948265" class="block w-full text-center bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-2.5 rounded-xl text-xs uppercase">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+                <span class="bg-slate-950 text-amber-500 text-xs font-black px-3 py-1 rounded-full uppercase">Early Bird Offer</span>
+                <h3 class="text-2xl font-black uppercase mt-2">Book Before 15 June & Get ₹2,000 OFF</h3>
+            </div>
+            <a href="https://wa.me/919797948265" class="bg-slate-950 hover:bg-slate-900 text-white font-extrabold px-8 py-3.5 rounded-xl uppercase text-xs shadow-md">
+                Book Now & Save
+            </a>
+        </div>
+    </section>
+
+    <section id="fleet" class="py-16 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-amber-600 font-bold text-xs uppercase tracking-widest">Our Fleet</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-slate-900 uppercase mt-1">Well Maintained Bikes For A Smooth & Safe Ride</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="border border-slate-200 rounded-2xl p-4 bg-slate-50">
+                    <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&q=80" alt="Himalayan" class="h-40 w-full object-cover rounded-xl mb-3">
+                    <h4 class="font-extrabold text-slate-900 uppercase">Himalayan 411 / 450</h4>
+                    <p class="text-xs text-slate-500 mb-3">₹1,800 / Day</p>
+                    <a href="https://wa.me/919797948265" class="block text-center bg-amber-500 text-slate-950 font-bold py-2 rounded-lg text-xs uppercase">Book Now</a>
+                </div>
+                <div class="border border-slate-200 rounded-2xl p-4 bg-slate-50">
+                    <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&q=80" alt="Classic 350" class="h-40 w-full object-cover rounded-xl mb-3">
+                    <h4 class="font-extrabold text-slate-900 uppercase">Classic 350</h4>
+                    <p class="text-xs text-slate-500 mb-3">₹1,200 / Day</p>
+                    <a href="https://wa.me/919797948265" class="block text-center bg-amber-500 text-slate-950 font-bold py-2 rounded-lg text-xs uppercase">Book Now</a>
+                </div>
+                <div class="border border-slate-200 rounded-2xl p-4 bg-slate-50">
+                    <img src="https://images.unsplash.com/photo-1609630875171-b1321377ee65?auto=format&fit=crop&q=80" alt="Scram 411" class="h-40 w-full object-cover rounded-xl mb-3">
+                    <h4 class="font-extrabold text-slate-900 uppercase">Scram 411</h4>
+                    <p class="text-xs text-slate-500 mb-3">₹1,500 / Day</p>
+                    <a href="https://wa.me/919797948265" class="block text-center bg-amber-500 text-slate-950 font-bold py-2 rounded-lg text-xs uppercase">Book Now</a>
+                </div>
+                <div class="border border-slate-200 rounded-2xl p-4 bg-slate-50">
+                    <img src="https://images.unsplash.com/photo-1558980910-a8da21293168?auto=format&fit=crop&q=80" alt="Meteor 350" class="h-40 w-full object-cover rounded-xl mb-3">
+                    <h4 class="font-extrabold text-slate-900 uppercase">Meteor 350</h4>
+                    <p class="text-xs text-slate-500 mb-3">₹1,400 / Day</p>
+                    <a href="https://wa.me/919797948265" class="block text-center bg-amber-500 text-slate-950 font-bold py-2 rounded-lg text-xs uppercase">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-black text-slate-900 uppercase text-center mb-12">Adventure Gallery</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&q=80" class="h-48 w-full object-cover rounded-2xl">
+                <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&q=80" class="h-48 w-full object-cover rounded-2xl">
+                <img src="https://images.unsplash.com/photo-1609630875171-b1321377ee65?auto=format&fit=crop&q=80" class="h-48 w-full object-cover rounded-2xl">
+                <img src="https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?auto=format&fit=crop&q=80" class="h-48 w-full object-cover rounded-2xl">
+            </div>
+        </div>
+    </section>
+
+    <section id="packages" class="py-16 bg-white border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12">
+            <div>
+                <h3 class="text-lg font-black text-slate-900 uppercase mb-4 flex items-center gap-2">
+                    <i data-lucide="check-circle-2" class="text-green-600"></i> What's Included
+                </h3>
+                <ul class="space-y-2 text-xs text-slate-600 font-medium">
+                    <li>✔ Hotel / Homestay Stay</li>
+                    <li>✔ Breakfast & Dinner</li>
+                    <li>✔ Premium Bike Rental</li>
+                    <li>✔ Fuel for the Entire Trip</li>
+                    <li>✔ Tour Leader & Guide</li>
+                    <li>✔ Permits & Entry Fees</li>
+                    <li>✔ Support Vehicle & First Aid Kit</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-black text-slate-900 uppercase mb-4 flex items-center gap-2">
+                    <i data-lucide="x-circle" class="text-red-600"></i> What's Excluded
+                </h3>
+                <ul class="space-y-2 text-xs text-slate-600 font-medium">
+                    <li>✖ Flights / Train Tickets</li>
+                    <li>✖ Lunch & Personal Expenses</li>
+                    <li>✖ Insurance & Bike Damage</li>
+                    <li>✖ Tips & Gratuities</li>
+                    <li>✖ Any Optional Activities</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-amber-600 font-bold text-xs uppercase">Who We Are</span>
+                <h2 class="text-2xl font-black text-slate-900 uppercase mt-1">Biker King Adventure</h2>
+                <p class="text-xs text-slate-600 leading-relaxed mt-3">
+                    Biker King Adventure is a community of passionate riders creating unforgettable biking experiences across Ladakh and scenic mountain ranges with safety, comfort, and authentic local guidance.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
+                <span class="text-3xl font-black text-slate-900">4.9 / 5</span>
+                <div class="text-amber-500 my-1">★★★★★</div>
+                <p class="text-xs text-slate-500">Based on 250+ Google Reviews</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="faqs" class="py-16 bg-white border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+            <h2 class="text-2xl font-black text-slate-900 uppercase text-center mb-8">Frequently Asked Questions</h2>
+            <div class="border border-slate-200 rounded-xl p-4 bg-slate-50">
+                <h4 class="font-bold text-xs text-slate-900">How do I book a tour?</h4>
+                <p class="text-[11px] text-slate-500 mt-1">Select your dates and contact us via WhatsApp or Phone to confirm your slot.</p>
+            </div>
+            <div class="border border-slate-200 rounded-xl p-4 bg-slate-50">
+                <h4 class="font-bold text-xs text-slate-900">Is a driving license required?</h4>
+                <p class="text-[11px] text-slate-500 mt-1">Yes, an original valid two-wheeler driving license is mandatory for riding.</p>
+            </div>
+            <div class="border border-slate-200 rounded-xl p-4 bg-slate-50">
+                <h4 class="font-bold text-xs text-slate-900">Is there support vehicle support?</h4>
+                <p class="text-[11px] text-slate-500 mt-1">Yes, a dedicated luggage vehicle and mechanic travel with group expeditions.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-slate-900 text-slate-400 py-12 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-slate-800">
+            <div>
+                <h4 class="font-bold text-white uppercase mb-2">Biker King Adventure</h4>
+                <p>Malpax Complex, Leh, Ladakh 194101</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-white uppercase mb-2">Contact Us</h4>
+                <p>Phone: +91 9797948265</p>
+                <p>Email: bikerkingadventure98@gmail.com</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-white uppercase mb-2">Instagram</h4>
+                <p>@ridewithbk</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 text-center text-[11px]">
+            © 2026 Biker King Adventure. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        document.getElementById('menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
