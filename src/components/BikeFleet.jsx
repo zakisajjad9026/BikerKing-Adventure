@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { bikesData } from '../data/bikes';
@@ -7,7 +6,7 @@ import { bikesData } from '../data/bikes';
 export default function BikeFleet({ onSelectBike, onOpenAllBikes }) {
   return (
     <section className="container-custom" id="bikes" style={{ padding: '60px 20px 40px 20px' }}>
-      
+
       {/* Section Header */}
       <div className="section-badge-header">
         <h2 className="title-divider">
@@ -33,9 +32,8 @@ export default function BikeFleet({ onSelectBike, onOpenAllBikes }) {
                 sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 12vw"
               />
             </div>
-
             {/* Bike Details */}
-            <div>
+            <div className="bike-card-details">
               <h3 className="bike-card-title">{bike.name}</h3>
               <p className="bike-card-specs">{bike.specs}</p>
               <p className="bike-card-price">{bike.priceDisplay}</p>
@@ -53,7 +51,6 @@ export default function BikeFleet({ onSelectBike, onOpenAllBikes }) {
           VIEW ALL BIKES
         </button>
       </div>
-
     </section>
   );
 }
