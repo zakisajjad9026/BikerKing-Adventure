@@ -5,7 +5,7 @@ import { bikesData } from '../data/bikes';
 
 export default function BikeFleet({ onSelectBike, onOpenAllBikes }) {
   return (
-    <section className="container-custom" id="bikes" style={{ padding: '60px 20px 40px 20px' }}>
+    <section className="container-custom" id="bikes" style={{ padding: '48px 20px 36px 20px' }}>
 
       {/* Section Header */}
       <div className="section-badge-header">
@@ -36,14 +36,17 @@ export default function BikeFleet({ onSelectBike, onOpenAllBikes }) {
             <div className="bike-card-details">
               <h3 className="bike-card-title">{bike.name}</h3>
               <p className="bike-card-specs">{bike.specs}</p>
-              <p className="bike-card-price">{bike.priceDisplay}</p>
+              <p className="bike-card-price">
+                <span className="bike-price-val">₹{bike.price.toLocaleString('en-IN')}</span>
+                <span className="bike-price-unit"> / Day</span>
+              </p>
             </div>
           </div>
         ))}
       </div>
 
       {/* View All Bikes CTA */}
-      <div style={{ textAlign: 'center', marginTop: '32px' }}>
+      <div style={{ textAlign: 'center', marginTop: '28px' }}>
         <button
           onClick={() => onOpenAllBikes ? onOpenAllBikes() : onSelectBike(bikesData[0])}
           className="btn-dark-pill"
