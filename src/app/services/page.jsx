@@ -55,7 +55,7 @@ export default function ServicesPage() {
       badge: "4x4 MOUNTAIN FLEET",
       title: "Leh Ladakh Taxi & 4x4 Cab Service",
       desc: "Explore Ladakh with absolute peace of mind. Private transfers, multi-day circuits, and rugged off-road journeys driven by certified local Ladakhi mountain pilots.",
-      media: "/images/packages/leh-ladakh.jpg",
+      media: "/images/services/taxi-service.jpg",
       features: [
         "Toyota Innova Crysta, Mahindra Scorpio 4x4 & Tempo Travelers",
         "Airport pick-and-drop from Kushok Bakula Rimpochee Airport (IXL)",
@@ -72,7 +72,7 @@ export default function ServicesPage() {
       badge: "GUIDED EXPEDITIONS",
       title: "Guided Motorcycle Tour Packages",
       desc: "All-inclusive, fully supported group and customized private expeditions. Ride freely while our back-end crew handles luggage, mechanics, permits, and emergencies.",
-      media: "/images/packages/nubra-valley.jpg",
+      media: "/images/services/guided-tours.jpg",
       features: [
         "5 to 12-day fixed departures across Ladakh & Zanskar Valley",
         "Dedicated backup support truck carrying luggage & spare bikes",
@@ -89,7 +89,7 @@ export default function ServicesPage() {
       badge: "CURATED STAYS",
       title: "Hotels & Luxury Swiss Camps",
       desc: "Rest comfortably after hours of mountain riding. We arrange guaranteed bookings at hand-picked boutique hotels in Leh town and luxury swiss camps beside Pangong Lake.",
-      media: "/images/packages/pangong-lake.jpg",
+      media: "/images/services/luxury-camps.jpg",
       features: [
         "3-Star & 4-Star boutique hotels in Leh with guaranteed heating",
         "Luxury lakeside Swiss cottage tents with attached washrooms",
