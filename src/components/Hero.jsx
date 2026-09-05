@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 import { ShieldCheck, Bike, Compass, Headphones } from 'lucide-react';
 
@@ -65,19 +66,13 @@ export default function Hero({ onOpenBooking, onScrollToContact }) {
             >
               BOOK YOUR JOURNEY
             </button>
-            <a
-              href="#contact"
-              onClick={(e) => {
-                if (onScrollToContact) {
-                  e.preventDefault();
-                  onScrollToContact();
-                }
-              }}
+            <Link
+              href="/contact"
               className="btn-ghost-white"
               style={{ padding: '12px 28px', fontSize: '0.85rem' }}
             >
               CONTACT US
-            </a>
+            </Link>
           </div>
 
         </div>

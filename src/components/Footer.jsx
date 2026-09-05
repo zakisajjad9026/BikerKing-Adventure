@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { Instagram, Facebook, Youtube, MessageCircle, Heart, CheckCircle } from 'lucide-react';
 import BrandLogo from './BrandLogo';
 
@@ -117,11 +118,12 @@ export default function Footer({ onOpenBooking }) {
           <div>
             <h4 className="footer-col-title">QUICK LINKS</h4>
             <ul className="footer-links-list">
-              <li><a href="#">Home</a></li>
-              <li><a href="#destinations">Destinations</a></li>
-              <li><a href="#bikes">Bike Rental</a></li>
-              <li><a href="#taxi-services">Taxi Service</a></li>
-              <li><a href="#packages">Tour Packages</a></li>
+              <li><Link href="/">Home</Link></li>
+              <li><Link href="/about">About Us</Link></li>
+              <li><Link href="/services">Our Services</Link></li>
+              <li><Link href="/#bikes">Bike Rental</Link></li>
+              <li><Link href="/services#taxi-service">Taxi Service</Link></li>
+              <li><Link href="/#packages">Tour Packages</Link></li>
             </ul>
           </div>
 
@@ -129,11 +131,11 @@ export default function Footer({ onOpenBooking }) {
           <div>
             <h4 className="footer-col-title">OTHER LINKS</h4>
             <ul className="footer-links-list">
-              <li><a href="#hotels">Hotels</a></li>
-              <li><a href="#about-us">About Us</a></li>
-              <li><a href="#gallery">Photo Gallery</a></li>
-              <li><a href="#blog">Blog</a></li>
-              <li><a href="#contact">Contact Us</a></li>
+              <li><Link href="/about">Our Himalayan Story</Link></li>
+              <li><Link href="/services#hotels">Hotels & Swiss Camps</Link></li>
+              <li><Link href="/services#gear-rental">Riding Gear Rental</Link></li>
+              <li><Link href="/contact">Contact Us</Link></li>
+              <li><Link href="/services#winter-expeditions">Winter Expeditions</Link></li>
             </ul>
           </div>
 
@@ -141,12 +143,12 @@ export default function Footer({ onOpenBooking }) {
           <div>
             <h4 className="footer-col-title">OUR SERVICES</h4>
             <ul className="footer-links-list">
-              <li><a href="#bikes">Bike Rental</a></li>
-              <li><a href="#taxi-services">Taxi Service Leh Ladakh</a></li>
-              <li><a href="#packages">Tour Package</a></li>
-              <li><a href="#hotels">Hotel Availability</a></li>
-              <li><a href="#snow-leopard">Snow Leopard in Winter</a></li>
-              <li><a href="#frozen-pangong">Frozen Pangong Lake in Winter</a></li>
+              <li><Link href="/#bikes">Royal Enfield Bike Rental</Link></li>
+              <li><Link href="/services#taxi-service">Taxi & 4x4 Leh Ladakh</Link></li>
+              <li><Link href="/#packages">Motorcycle Tour Packages</Link></li>
+              <li><Link href="/services#hotels">Hotel & Resort Booking</Link></li>
+              <li><Link href="/services#snow-leopard">Snow Leopard Winter Tour</Link></li>
+              <li><Link href="/services#frozen-pangong">Frozen Pangong Lake Drive</Link></li>
             </ul>
           </div>
 

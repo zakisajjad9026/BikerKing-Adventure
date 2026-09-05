@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Link from 'next/link';
 import { Compass, Bike, ShieldCheck, Sun, Headphones } from 'lucide-react';
 import { whyChooseData } from '../data/reviews';
 
@@ -41,6 +42,23 @@ export default function WhyChooseUs() {
             </div>
           </div>
         ))}
+      </div>
+
+      <div style={{ marginTop: '20px', textAlign: 'left' }}>
+        <Link 
+          href="/about" 
+          style={{ 
+            color: 'var(--primary-orange)', 
+            fontWeight: 700, 
+            fontSize: '0.8125rem', 
+            textDecoration: 'none', 
+            display: 'inline-flex', 
+            alignItems: 'center', 
+            gap: '6px' 
+          }}
+        >
+          <span>Learn more about our Ladakhi team & history</span> &rarr;
+        </Link>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 
 export default function CtaBanner({ onOpenBooking, onScrollToContact }) {
@@ -36,19 +37,13 @@ export default function CtaBanner({ onOpenBooking, onScrollToContact }) {
           >
             BOOK NOW
           </button>
-          <a
-            href="#contact"
-            onClick={(e) => {
-              if (onScrollToContact) {
-                e.preventDefault();
-                onScrollToContact();
-              }
-            }}
+          <Link
+            href="/contact"
             className="btn-ghost-white"
             style={{ padding: '8px 20px', fontSize: '0.75rem' }}
           >
             CONTACT US
-          </a>
+          </Link>
         </div>
       </div>
     </div>

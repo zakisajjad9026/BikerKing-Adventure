@@ -1,27 +1,32 @@
 "use client";
 
 import React, { useState } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Menu, X, Phone } from 'lucide-react';
 import BrandLogo from './BrandLogo';
 
 export default function Navbar({ onOpenBooking }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeNav, setActiveNav] = useState('HOME');
+  const pathname = usePathname();
 
   const navLinks = [
-    { name: 'HOME', href: '#' },
-    { name: 'DESTINATIONS', href: '#destinations' },
-    { name: 'BIKE RENTAL', href: '#bikes' },
-    { name: 'TAXI SERVICE', href: '#taxi-services' },
-    { name: 'PACKAGES', href: '#packages' },
-    { name: 'HOTELS', href: '#hotels' },
-    { name: 'ABOUT US', href: '#about-us' },
-    { name: 'CONTACT US', href: '#contact' },
+    { name: 'HOME', href: '/' },
+    { name: 'ABOUT US', href: '/about' },
+    { name: 'SERVICES', href: '/services' },
+    { name: 'BIKE RENTAL', href: '/#bikes' },
+    { name: 'TAXI SERVICE', href: '/services#taxi-service' },
+    { name: 'PACKAGES', href: '/#packages' },
+    { name: 'HOTELS', href: '/services#hotels' },
+    { name: 'CONTACT US', href: '/contact' },
   ];
 
-  const handleNavClick = (name, href) => {
-    setActiveNav(name);
-    setMobileMenuOpen(false);
+  const isLinkActive = (link) => {
+    if (link.href === '/' && pathname === '/') return true;
+    if (link.href === '/about' && (pathname === '/about' || pathname === '/about-us')) return true;
+    if (link.href === '/services' && (pathname === '/services' || pathname === '/service')) return true;
+    if (link.href === '/contact' && (pathname === '/contact' || pathname === '/contact-us')) return true;
+    return false;
   };
 
   return (
@@ -29,21 +34,20 @@ export default function Navbar({ onOpenBooking }) {
       <div className="container-custom" style={{ height: '80px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         
         {/* Brand Logo with Compass Emblem */}
-        <a href="#" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+        <Link href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
           <BrandLogo size={56} showText={true} />
-        </a>
+        </Link>
 
         {/* Desktop Nav Links */}
-        <nav style={{ display: 'none', alignItems: 'center', gap: '22px' }} className="desktop-nav">
+        <nav style={{ display: 'none', alignItems: 'center', gap: '20px' }} className="desktop-nav">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.name}
               href={link.href}
-              className={`nav-link ${activeNav === link.name ? 'active' : ''}`}
-              onClick={() => handleNavClick(link.name, link.href)}
+              className={`nav-link ${isLinkActive(link) ? 'active' : ''}`}
             >
               {link.name}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -87,22 +91,22 @@ export default function Navbar({ onOpenBooking }) {
         }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
                 href={link.href}
-                onClick={() => handleNavClick(link.name, link.href)}
+                onClick={() => setMobileMenuOpen(false)}
                 style={{
                   fontFamily: 'var(--font-display)',
                   fontSize: '0.9rem',
                   fontWeight: 700,
-                  color: activeNav === link.name ? 'var(--primary-orange)' : 'var(--slate-700)',
+                  color: isLinkActive(link) ? 'var(--primary-orange)' : 'var(--slate-700)',
                   textDecoration: 'none',
                   padding: '6px 0',
                   borderBottom: '1px solid var(--slate-100)'
                 }}
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
             <div style={{ paddingTop: '8px' }}>
               <a 
