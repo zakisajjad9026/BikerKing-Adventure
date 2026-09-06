@@ -90,7 +90,7 @@ export default function ContactPage() {
       </section>
 
       {/* 4. Main Contact Grid */}
-      <section className="container-custom" style={{ padding: '40px 20px 60px 20px' }}>
+      <section className="container-custom" style={{ paddingTop: '40px', paddingBottom: '60px' }}>
         <div className="contact-page-grid">
           
           {/* Left Column: Direct Contact Info Channels */}

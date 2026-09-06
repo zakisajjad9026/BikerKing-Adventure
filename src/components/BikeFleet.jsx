@@ -5,7 +5,7 @@ import { bikesData } from '../data/bikes';
 
 export default function BikeFleet({ onSelectBike, onOpenAllBikes }) {
   return (
-    <section className="container-custom" id="bikes" style={{ padding: '48px 20px 36px 20px' }}>
+    <section className="container-custom" id="bikes" style={{ paddingTop: '52px', paddingBottom: '44px' }}>
 
       {/* Section Header */}
       <div className="section-badge-header">

@@ -22,7 +22,7 @@ export default function TourPackages({ onSelectPackage, onOpenAllPackages }) {
   };
 
   return (
-    <section className="container-custom" id="packages" style={{ padding: '40px 20px 50px 20px' }}>
+    <section className="container-custom" id="packages" style={{ paddingTop: '44px', paddingBottom: '52px' }}>
       
       {/* Section Header */}
       <div className="section-badge-header">

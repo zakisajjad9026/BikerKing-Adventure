@@ -108,7 +108,7 @@ export default function AboutPage() {
       </div>
 
       {/* 5. Our Story Section */}
-      <section className="container-custom" style={{ padding: '20px 20px 60px 20px' }}>
+      <section className="container-custom" style={{ paddingTop: '20px', paddingBottom: '60px' }}>
         <div className="about-story-grid">
           
           {/* Left Narrative */}
@@ -228,12 +228,12 @@ export default function AboutPage() {
       </section>
 
       {/* 7. Reviews Section */}
-      <section className="container-custom" style={{ padding: '0 20px 60px 20px' }}>
+      <section className="container-custom" style={{ paddingTop: '0px', paddingBottom: '60px' }}>
         <Reviews />
       </section>
 
       {/* 8. Call to Action Banner */}
-      <section style={{ backgroundColor: '#0f172a', color: 'var(--white)', padding: '60px 20px', borderTop: '2px solid var(--primary-orange)' }}>
+      <section style={{ backgroundColor: '#0f172a', color: 'var(--white)', padding: '60px 0', borderTop: '2px solid var(--primary-orange)' }}>
         <div className="container-custom" style={{ textAlign: 'center' }}>
           <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '2rem', fontWeight: 900, marginBottom: '12px' }}>
             READY TO RIDE THE ROOF OF THE WORLD?

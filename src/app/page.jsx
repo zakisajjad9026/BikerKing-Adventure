@@ -82,7 +82,7 @@ export default function Home() {
       />
 
       {/* 7. Lower Multi-Section Experience Grid */}
-      <section className="container-custom" style={{ padding: '30px 20px 60px 20px' }}>
+      <section className="container-custom" style={{ paddingTop: '30px', paddingBottom: '60px' }}>
         
         {/* Row 1: Why Choose Us (Left) & Reviews (Right) */}
         <div className="lower-sections-container">

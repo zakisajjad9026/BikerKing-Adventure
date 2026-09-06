@@ -37,6 +37,8 @@ export default function ServicesPage() {
       id: "bike-rental",
       badge: "FLAGSHIP SERVICE",
       title: "Royal Enfield Motorbike Rental",
+      shortTitle: "Royal Enfield Bikes",
+      icon: Bike,
       desc: "Conquer the highest mountain passes on properly tuned, top-tier Royal Enfield motorbikes. Every motorcycle is rigorously inspected and accessorized for extreme Ladakh terrain.",
       media: "/images/bikes/himalayan-450.jpg",
       features: [
@@ -46,7 +48,7 @@ export default function ServicesPage() {
         "Comprehensive toolkit, spare tube & puncture repair kit included",
         "Clear security deposit terms & flexible daily/weekly rental plans"
       ],
-      price: "Starting from ₹800 / Day",
+      price: "From ₹800 / Day",
       ctaText: "Rent A Motorcycle",
       bookingType: "bike"
     },
@@ -54,6 +56,8 @@ export default function ServicesPage() {
       id: "taxi-service",
       badge: "4x4 MOUNTAIN FLEET",
       title: "Leh Ladakh Taxi & 4x4 Cab Service",
+      shortTitle: "4x4 Mountain Taxis",
+      icon: Car,
       desc: "Explore Ladakh with absolute peace of mind. Private transfers, multi-day circuits, and rugged off-road journeys driven by certified local Ladakhi mountain pilots.",
       media: "/images/services/taxi-service.jpg",
       features: [
@@ -63,7 +67,7 @@ export default function ServicesPage() {
         "Highest motorable roads: Khardung La (17,982 ft) & Umling La (19,024 ft)",
         "Fixed union approved transparent taxi fare tariffs"
       ],
-      price: "Custom Day & Circuit Rates",
+      price: "Custom Circuit Rates",
       ctaText: "Book A Taxi",
       bookingType: "service"
     },
@@ -71,6 +75,8 @@ export default function ServicesPage() {
       id: "packages-service",
       badge: "GUIDED EXPEDITIONS",
       title: "Guided Motorcycle Tour Packages",
+      shortTitle: "Tour Packages",
+      icon: Compass,
       desc: "All-inclusive, fully supported group and customized private expeditions. Ride freely while our back-end crew handles luggage, mechanics, permits, and emergencies.",
       media: "/images/services/guided-tours.jpg",
       features: [
@@ -80,7 +86,7 @@ export default function ServicesPage() {
         "Medical first-aid kit & high-altitude oxygen cylinders on board",
         "Comfortable boutique hotel stays and lakeside swiss camps"
       ],
-      price: "All-Inclusive Tour Packages",
+      price: "All-Inclusive Tours",
       ctaText: "Explore Packages",
       bookingType: "package"
     },
@@ -88,6 +94,8 @@ export default function ServicesPage() {
       id: "hotels",
       badge: "CURATED STAYS",
       title: "Hotels & Luxury Swiss Camps",
+      shortTitle: "Hotels & Swiss Camps",
+      icon: Building2,
       desc: "Rest comfortably after hours of mountain riding. We arrange guaranteed bookings at hand-picked boutique hotels in Leh town and luxury swiss camps beside Pangong Lake.",
       media: "/images/services/luxury-camps.jpg",
       features: [
@@ -104,7 +112,9 @@ export default function ServicesPage() {
     {
       id: "snow-leopard",
       badge: "WINTER EXPEDITION",
-      title: "Snow Leopard Tracking in Hemis National Park",
+      title: "Snow Leopard Tracking in Hemis",
+      shortTitle: "Snow Leopard Trek",
+      icon: Snowflake,
       desc: "A thrilling once-in-a-lifetime winter wildlife expedition (January to March) into the snowy mountains of Hemis National Park to track the elusive 'Ghost of the Mountains'.",
       media: "/images/services/snow-leopard.jpg",
       features: [
@@ -121,7 +131,9 @@ export default function ServicesPage() {
     {
       id: "frozen-pangong",
       badge: "MAGICAL ICE LAKE",
-      title: "Frozen Pangong Lake Winter Experience",
+      title: "Frozen Pangong Lake Winter Tour",
+      shortTitle: "Frozen Pangong Lake",
+      icon: Flame,
       desc: "Witness the sheer magic of the high Himalayas in winter. Cross snow-covered Chang La in insulated 4x4s and walk upon the crystal turquoise ice sheet of Pangong Lake.",
       media: "/images/services/frozen-lake.jpg",
       features: [
@@ -131,16 +143,18 @@ export default function ServicesPage() {
         "Warm insulated heating homestays near the lake boundary",
         "Strict altitude acclimatization and medical monitoring"
       ],
-      price: "Exclusive Winter Departures",
+      price: "Exclusive Departures",
       ctaText: "Inquire Frozen Lake",
       bookingType: "service"
     },
     {
       id: "gear-rental",
       badge: "RIDER SAFETY",
-      title: "Riding Gear & Camping Equipment Rental",
+      title: "Riding Gear & Camping Equipment",
+      shortTitle: "Riding & Camp Gear",
+      icon: ShieldCheck,
       desc: "Travel light without hauling heavy luggage on flights. Rent certified protective motorcycle riding apparel, warm waterproof layers, and camping gear right here in Leh.",
-      media: "/images/bikes/scram-411.webp",
+      media: "/images/services/riding-gear.jpg",
       features: [
         "CE Level 2 armored all-weather riding jackets & riding pants",
         "High-altitude waterproof thermal winter riding gloves",
@@ -155,9 +169,11 @@ export default function ServicesPage() {
     {
       id: "permits",
       badge: "OFFICIAL CLEARANCE",
-      title: "Inner Line Permits (ILP) & Environmental Fees",
+      title: "Inner Line Permits & Clearances",
+      shortTitle: "Inner Line Permits",
+      icon: FileCheck,
       desc: "Skip the paperwork and administrative lines. We process and print all official Leh District Inner Line Permits and Green/Wildlife fees for you in advance.",
-      media: "/images/bikes/himalayan-440.webp",
+      media: "/images/services/permits.jpg",
       features: [
         "Fast-track issuance within 24 hours of ID submission",
         "Permits for Khardung La, Nubra Valley (Turtuk), Pangong & Hanle",
@@ -165,7 +181,7 @@ export default function ServicesPage() {
         "Physical stamped documents ready for collection upon bike pickup",
         "Expert local consultation on road blocks & military checkpoints"
       ],
-      price: "Fast-Track Service",
+      price: "Fast-Track Processing",
       ctaText: "Request Permits",
       bookingType: "service"
     }
@@ -201,65 +217,54 @@ export default function ServicesPage() {
       </section>
 
       {/* 4. Quick Services Overview Anchor Grid */}
-      <section className="container-custom" style={{ padding: '36px 20px 20px 20px' }}>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
-          gap: '12px'
-        }}>
-          {servicesList.map((srv) => (
-            <a
-              key={srv.id}
-              href={`#${srv.id}`}
-              style={{
-                background: 'var(--white)',
-                border: '1px solid #e2e8f0',
-                borderRadius: '8px',
-                padding: '12px 14px',
-                textDecoration: 'none',
-                color: 'var(--slate-800)',
-                fontSize: '0.8rem',
-                fontWeight: 700,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                transition: 'all 0.2s ease',
-                boxShadow: '0 1px 3px rgba(0,0,0,0.03)'
-              }}
-              className="quick-service-anchor"
-            >
-              <span>{srv.title.split(' ')[0]} {srv.title.split(' ')[1]}</span>
-              <span style={{ color: 'var(--primary-orange)' }}>&darr;</span>
-            </a>
-          ))}
+      <section className="container-custom" style={{ paddingTop: '36px', paddingBottom: '16px' }}>
+        <div className="services-quick-anchors">
+          {servicesList.map((srv) => {
+            const IconComp = srv.icon;
+            return (
+              <a
+                key={srv.id}
+                href={`#${srv.id}`}
+                className="quick-service-anchor"
+              >
+                <div className="quick-service-anchor-left">
+                  <div className="quick-service-anchor-icon">
+                    <IconComp size={15} />
+                  </div>
+                  <span className="quick-service-anchor-text">{srv.shortTitle}</span>
+                </div>
+                <span style={{ color: 'var(--primary-orange)', fontWeight: 800, fontSize: '0.9rem' }}>&darr;</span>
+              </a>
+            );
+          })}
         </div>
       </section>
 
-      {/* 5. Detailed Full Services Grid */}
-      <section className="container-custom" style={{ padding: '20px 20px 60px 20px' }}>
+      {/* 5. Detailed Full Services Grid - 4 Rows and 2 Columns Layout */}
+      <section className="container-custom" style={{ paddingTop: '16px', paddingBottom: '60px' }}>
         <div className="services-list-grid">
           {servicesList.map((service) => (
             <div key={service.id} id={service.id} className="service-full-card">
               
-              {/* Media Container */}
+              {/* Media Container with Badge */}
               <div className="service-card-media">
+                <span className="service-card-badge">{service.badge}</span>
                 <Image
                   src={service.media}
                   alt={service.title}
                   fill
                   style={{ objectFit: 'cover' }}
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div style={{
                   position: 'absolute',
                   inset: 0,
-                  background: 'linear-gradient(to top, rgba(15, 23, 42, 0.6) 0%, transparent 60%)'
+                  background: 'linear-gradient(to top, rgba(15, 23, 42, 0.45) 0%, transparent 60%)'
                 }} />
               </div>
 
               {/* Body */}
               <div className="service-card-body">
-                <span className="service-card-badge">{service.badge}</span>
                 <h3 className="service-card-title">{service.title}</h3>
                 <p className="service-card-desc">{service.desc}</p>
 
@@ -273,17 +278,18 @@ export default function ServicesPage() {
                   ))}
                 </ul>
 
-                {/* Footer Action */}
+                {/* Fixed Footer Action - Price on left, fixed button on right */}
                 <div className="service-card-footer">
-                  <span style={{ fontSize: '0.8125rem', fontWeight: 800, color: 'var(--slate-900)' }}>
-                    {service.price}
-                  </span>
+                  <div className="service-card-price-block">
+                    <span className="service-card-price-label">Pricing / Plan</span>
+                    <span className="service-card-price-value">{service.price}</span>
+                  </div>
                   <button
                     onClick={() => handleOpenBooking(service)}
-                    className="btn-primary-orange"
-                    style={{ padding: '8px 18px', fontSize: '0.775rem' }}
+                    className="service-card-btn"
                   >
-                    {service.ctaText} &rarr;
+                    <span>{service.ctaText}</span>
+                    <ArrowRight size={14} />
                   </button>
                 </div>
 
